@@ -2,6 +2,8 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux/es/exports";
 import { getData } from "../Redux/actions/dataAction";
 import { useEffect } from "react";
+import {Link} from 'react-router-dom'
+
 import dataReducer from "../Redux/reducers/dataReducer";
 
 const Home = () => {
@@ -14,8 +16,8 @@ const Home = () => {
     },[])
     return(
         <div>
-            <h1>Test</h1>
-            {/* <h1>{data.dataReducer.data}</h1> */}
+            <h1>Homepage</h1>
+            {/* <h1>{data.dataReducer.data}</h1>
             {
                 dataReducer.data.map((item) =>(
                     <>
@@ -23,7 +25,10 @@ const Home = () => {
                     <p>{item.first_name}</p>
                     </>
                 ))
-            }
+            } */}
+            <Link to={'/register'}>
+             <button>Registration</button>
+            </Link>
         </div>
     )
 }
